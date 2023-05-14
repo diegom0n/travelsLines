@@ -1,0 +1,42 @@
+.header{
+    background-color: white;
+    color: #5ab04f;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContainer{
+    display: block;
+    width: 100%;
+    max-width: 1080px;
+    margin: 20px 0px 10px 0px;
+}
+
+.logo{
+    font-weight: 500;
+    margin-top: 5px;
+    margin-left: 50px;
+    gap: 10px;
+}
+
+.imgLogo{
+    width: 100px;
+}
+
+.headerList{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.headerListItem{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerListItem.active{
+    border: 1px solid #5ab04f;
+    padding: 10px;
+    border-radius: 20px;
+}
