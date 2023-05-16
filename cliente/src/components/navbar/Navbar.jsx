@@ -1,15 +1,22 @@
 import "./navbar.css"
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import HailRoundedIcon from '@mui/icons-material/HailRounded';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <div className='navbar'>
+      <img src="" alt="" />
         <div className='navContainer'>
             <div className='navItems'>
-              <span>
+              <span className="contacto">
               +56 2 2222 2222
               </span>
-                <button className='navButton'>Registrarse</button>
-                <button className='navButton'>Iniciar Sesión</button>
+                <div className="navButton">
+                  <Link className="link" to ="/login">
+                    <HailRoundedIcon/>
+                  </Link>
+                </div>
             </div>
         </div>
     </div>

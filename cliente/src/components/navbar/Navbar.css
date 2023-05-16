@@ -1,29 +1,44 @@
 .navbar{
-    height: 50px;
-    background-color: #3a3aa5;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
+    height: 80px;
+    background-color: #1dbc28;
+}
+
+.icon{
+    width: 150px;
+    height: 150px;
 }
 
 .navContainer{
-    margin-left: 1400px;
+    margin-right: 100px;
     width: 100%;
-    max-width: 1080px;
+    max-width: 1024px;
     color: white;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
+.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    
+}
+
+.contacto{
+    font-size: 24px;
+}
 
 .navButton{
-    background-color: #fff;
-    margin-top: 5;
-    margin-left: 10px;
-    border-radius: 6px;
-    border: 1px solid transparent;
-    padding: 5px 10px;
+    width: 50px;
+    display: flex;
+    gap: 15px;
+    color: #fff;
     cursor: pointer;
-    color: #2500ff;
-    font-family: inherit;
 }

@@ -10,6 +10,9 @@ import './App.css'
 import Home from './pages/Home/Home';
 import List from './pages/list/List';
 import Servicio from './pages/Servicio/Servicio';
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -20,6 +23,8 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/servicios" element={<List/>}/>
         <Route path="/servicios/:id" element={<Servicio/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
     </BrowserRouter>
   )

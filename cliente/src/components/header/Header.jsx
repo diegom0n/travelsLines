@@ -3,12 +3,14 @@ import QuestionMarkRoundedIcon from '@mui/icons-material/QuestionMarkRounded';
 import HailRoundedIcon from '@mui/icons-material/HailRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 
+
 const Header = () => {
   return (
     <div className="header">
+        <div className="logoContainer">
         <span className='logo'>
-            <img className="imgLogo" src="./src/assets/logo.png" alt="Travels Lines" />
         </span>
+        </div>
         <div className="headerContainer">
             <div className="headerList">
                 <div className="headerListItem active">

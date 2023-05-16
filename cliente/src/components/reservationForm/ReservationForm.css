@@ -1,15 +1,30 @@
 @import url('https://fonts.cdnfonts.com/css/coolvetica-2');
 
+
 .resFormContainer{
-    background-image: url("https://cdn.discordapp.com/attachments/981382192271859775/1106463924985024573/alternative-transportation-2178317_1280.jpg");
-    background-size: cover;
-    background-position: fill;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding: 20px;
     font-size: 24px;
-    color: #3a3aa5;
-    width: 97,9%;
-    height: 1024px;
-    
+    color: #0053d7;
+    position: fixed;
+    margin-top: 90px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 97%;
+    height: 960px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+
+.resFormWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 
 .resForm{
@@ -21,10 +36,9 @@
     margin: 60px 0px 0px 100px;
     padding: 20px;
     border-radius: 20px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255,255,255,0.229875495119923) 0%, 
-                                      rgba(255,255,255,0.6248334783132004) 76%, 
-                                      rgba(255,255,255,1) 100%);
+    background: ;
+    background: white;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
   }
   
 label{
@@ -39,9 +53,12 @@ label{
     border-radius: 20px;
   }
 
-.resFormButton{
+.formButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 10px 15px;
-    background: #007bff;
+    background: #0053d7;
     color: #fff;
     border: none;
     border-radius: 30px;

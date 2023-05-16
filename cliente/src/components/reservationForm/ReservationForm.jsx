@@ -21,6 +21,8 @@ const ReservationForm = () => {
 
   return (
     <div className="resFormContainer">
+      <div className="resFormWrapper">
+
         <form onSubmit={handleSubmit} className='resForm'>
           <label>
             Lugar de recogida:
@@ -62,8 +64,10 @@ const ReservationForm = () => {
             />
           </label>
 
-          <button type="submit" className='formButton'>Reservar</button>
+          <div><button type="submit" className='formButton'>Reservar</button></div>
         </form>
+        
+      </div>
     </div>
   );
 };

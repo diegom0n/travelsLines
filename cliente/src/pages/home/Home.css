@@ -1,0 +1,13 @@
+.home{
+  position: relative;
+}
+
+.footer {
+  position: relative;
+  z-index: 2; /* Valor mayor que el z-index del formulario de reserva */
+}
+
+.reservation-form{
+  position: relative;
+  z-index: 1;
+}

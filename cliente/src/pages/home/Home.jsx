@@ -11,8 +11,13 @@ const Home = () => {
       <div>
         <Navbar/>
         <Header/>
-        <ReservationForm/>
-        <Footer/>
+        <div className="reservation-form">
+          <ReservationForm/>
+        </div>
+        <Slider/>
+        <div className="footer">
+          <Footer/>
+        </div>
       </div>
     </div>
   )
