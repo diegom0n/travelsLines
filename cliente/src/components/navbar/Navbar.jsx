@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <img src="" alt="" />
+      <img src="../src/assets/logo_texto_800px.png" alt="" className="logoText"/>
         <div className='navContainer'>
             <div className='navItems'>
               <span className="contacto">

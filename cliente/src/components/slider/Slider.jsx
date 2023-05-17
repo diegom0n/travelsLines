@@ -2,47 +2,50 @@ import React, { useState } from 'react'
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ReservationForm from '../reservationForm/ReservationForm';
-import "./Slider.scss"
+import Slider from 'react-slick';
 
-const Slider = () => {
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const [currentSlide, setCurrentSlide] = useState(0)
+import './Slider.css'; // Archivo CSS para estilos personalizados del slider
 
-  const data = [
-    "https://cdn.discordapp.com/attachments/981382192271859775/1106463924985024573/alternative-transportation-2178317_1280.jpg",
-    "https://i.pinimg.com/originals/3e/2a/f6/3e2af664e061013a3d05aa99fa20c1d4.jpg",
-    "https://the-vet.co/wp-content/uploads/2012/10/Pet-travel-touch-up.jpg",
-    "https://wallpapercave.com/wp/wp10653831.jpg",
-  ];
-
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
+const SliderComponent = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
   };
-  const nextSlide = () => {
-    setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
-  };
-
 
   return (
-    <div className="slider">
-      <div className="container" style={{transform:`translateX(-${currentSlide * 100}vw)`}}>
-        <img src={data[0]} alt="" />
-        <img src={data[1]} alt="" />
-        <img src={data[2]} alt="" />
-        <img src={data[3]} alt="" />
-      </div>
-      <div className="icons">
-        <div className="icon" onClick={prevSlide}>
-          <ArrowBackIosIcon />
+    <div className="slider-container">
+      <Slider {...settings}>
+        <div className="slide">
+          <img src="https://plus.unsplash.com/premium_photo-1663090281719-0b9087b34a5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 1" />
         </div>
-      </div>
-      <div className="icons">
-        <div className="icon" onClick={nextSlide}>
-          <ArrowForwardIosIcon />
+        <div className="slide">
+          <img src="https://images.unsplash.com/photo-1485575397155-c9b47f81f645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 2" />
         </div>
+        <div className="slide">
+          <img src="https://images.unsplash.com/photo-1535655685871-dc8158ff167e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="Imagen 3" className='img3'/>
+        </div>
+      </Slider>
+      <div className="reservation-box">
+        <h2>Reserva tu traslado</h2>
+        {/* Aquí puedes agregar los campos del formulario de reserva */}
+        <form>
+          {/* Campos del formulario */}
+          <input type="text" name="nombre" placeholder="Nombre" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="date" name="fecha" placeholder="Fecha" />
+          <input type="submit" value="Reservar" />
+        </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Slider
+export default SliderComponent;

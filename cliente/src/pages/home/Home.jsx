@@ -4,6 +4,7 @@ import Header from '../../components/header/Header'
 import ReservationForm from '../../components/reservationForm/ReservationForm'
 import Footer from "../../components/footer/Footer"
 import Slider from "../../components/slider/Slider"
+import SliderComponent from "../../components/slider/Slider"
 
 const Home = () => {
   return (
@@ -11,13 +12,8 @@ const Home = () => {
       <div>
         <Navbar/>
         <Header/>
-        <div className="reservation-form">
-          <ReservationForm/>
-        </div>
-        <Slider/>
-        <div className="footer">
-          <Footer/>
-        </div>
+        <SliderComponent />
+        <Footer/>
       </div>
     </div>
   )

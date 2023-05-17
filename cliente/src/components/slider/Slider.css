@@ -1,0 +1,52 @@
+.slider-container {
+  position: relative;
+}
+
+.slide {
+  text-align: center;
+  height: 1024px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.img3{
+  width: 90%;
+}
+
+.reservation-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-box h2 {
+  margin-bottom: 10px;
+}
+
+.reservation-box form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reservation-box form input {
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 200px;
+}
+
+.reservation-box form input[type="submit"] {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}

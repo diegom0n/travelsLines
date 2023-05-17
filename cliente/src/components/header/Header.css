@@ -3,11 +3,10 @@
     color: #2879fe;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .headerContainer{
-    display: block;
     width: 100%;
     max-width: 1080px;
     margin: 20px 0px 10px 0px;
@@ -20,10 +19,15 @@
     gap: 10px;
 }
 
-.imgLogo{
-    width: 100px;
-}
-
+.imgLogo {
+    position: absolute;
+    top: 7px; /* Ajusta esta propiedad para mover la imagen hacia arriba o hacia abajo */
+    left: 10%; /* Ajusta esta propiedad para alinear la imagen horizontalmente */
+    transform: translateX(-50%); /* Ajusta esta propiedad para centrar la imagen horizontalmente */
+    width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
+    z-index: 1; /* Asegura que la imagen se muestre por encima del contenido del encabezado */
+  }
+  
 .headerList{
     display: flex;
     align-items: center;

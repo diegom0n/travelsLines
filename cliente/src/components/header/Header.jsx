@@ -7,9 +7,8 @@ import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 const Header = () => {
   return (
     <div className="header">
-        <div className="logoContainer">
-        <span className='logo'>
-        </span>
+        <div className='logo'>´
+            <img src="../src/assets/logo_flecha_800px.png" alt="" className="imgLogo"/>
         </div>
         <div className="headerContainer">
             <div className="headerList">
