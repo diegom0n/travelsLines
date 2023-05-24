@@ -10,6 +10,16 @@ import 'slick-carousel/slick/slick-theme.css';
 import './Slider.css'; // Archivo CSS para estilos personalizados del slider
 
 const SliderComponent = () => {
+  const [selectedService, setSelectedService] = useState(null);
+
+  const handleServiceSelection = (service) => {
+    setSelectedService(service);
+  };
+
+  const handleGoBack = () => {
+    setSelectedService(null);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -24,25 +34,42 @@ const SliderComponent = () => {
     <div className="slider-container">
       <Slider {...settings}>
         <div className="slide">
-          <img src="https://plus.unsplash.com/premium_photo-1663090281719-0b9087b34a5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 1" />
+          <img src="https://images.unsplash.com/photo-1656110074070-34939c497739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Imagen 1" />
         </div>
         <div className="slide">
           <img src="https://images.unsplash.com/photo-1485575397155-c9b47f81f645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 2" />
         </div>
         <div className="slide">
-          <img src="https://images.unsplash.com/photo-1535655685871-dc8158ff167e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="Imagen 3" className='img3'/>
+          <img src="https://images.unsplash.com/photo-1605410522294-80aa1f8b4153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80" alt="Imagen 3" />
         </div>
       </Slider>
       <div className="reservation-box">
-        <h2>Reserva tu traslado</h2>
-        {/* Aquí puedes agregar los campos del formulario de reserva */}
-        <form>
-          {/* Campos del formulario */}
-          <input type="text" name="nombre" placeholder="Nombre" />
-          <input type="email" name="email" placeholder="Email" />
-          <input type="date" name="fecha" placeholder="Fecha" />
-          <input type="submit" value="Reservar" />
-        </form>
+        {!selectedService ? (
+          <>
+            <h2>Reserva tu traslado</h2>
+            <div className="service-selection">
+              <h3>Selecciona el tipo de servicio:</h3>
+              <div className="service-buttons">
+                <button onClick={() => handleServiceSelection('Empresas Privadas')}>EMPRESAS PRIVADAS</button>
+                <button onClick={() => handleServiceSelection('Mascotas')}>MASCOTAS</button>
+                <button onClick={() => handleServiceSelection('Encomiendas')}>ENCOMIENDAS</button>
+                <button onClick={() => handleServiceSelection('Particulares')}>PARTICULARES</button>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <h2>Reserva tu traslado</h2>
+            <h3>Tipo de servicio seleccionado: {selectedService}</h3>
+            <form>
+              <input type="text" name="nombre" placeholder="Nombre" />
+              <input type="email" name="email" placeholder="Email" />
+              <input type="date" name="fecha" placeholder="Fecha" />
+              <input type="submit" value="Reservar" />
+            </form>
+            <button onClick={handleGoBack}>Volver atrás</button>
+          </>
+        )}
       </div>
     </div>
   );

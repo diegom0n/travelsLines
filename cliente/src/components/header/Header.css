@@ -1,47 +1,47 @@
-.header{
+.header {
     background-color: white;
     color: #2879fe;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 20px;
-}
-
-.headerContainer{
+  }
+  
+  .headerContainer {
     width: 100%;
     max-width: 1080px;
     margin: 20px 0px 10px 0px;
-}
-
-.logo{
-    font-weight: 500;
-    margin-top: 5px;
-    margin-left: 50px;
-    gap: 10px;
-}
-
-.imgLogo {
-    position: absolute;
-    top: 7px; /* Ajusta esta propiedad para mover la imagen hacia arriba o hacia abajo */
-    left: 10%; /* Ajusta esta propiedad para alinear la imagen horizontalmente */
-    transform: translateX(-50%); /* Ajusta esta propiedad para centrar la imagen horizontalmente */
-    width: 150px; /* Ajusta el ancho de la imagen según tus necesidades */
-    z-index: 1; /* Asegura que la imagen se muestre por encima del contenido del encabezado */
+    display: flex;
+    justify-content: center;
   }
   
-.headerList{
+  .headerList {
     display: flex;
     align-items: center;
     gap: 40px;
-}
-
-.headerListItem{
+  }
+  
+  .headerListItem {
     display: flex;
     align-items: center;
     gap: 10px;
-}
-
-.headerListItem.active{
+  }
+  
+  .headerListItem.active {
     border: 1px solid #2879fe;
     padding: 10px;
     border-radius: 20px;
-}
+  }
+  
+  /* Media query para pantallas más pequeñas */
+  @media (max-width: 768px) {
+    .headerList {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .headerListItem {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -2,27 +2,32 @@ import "./header.css"
 import QuestionMarkRoundedIcon from '@mui/icons-material/QuestionMarkRounded';
 import HailRoundedIcon from '@mui/icons-material/HailRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
   return (
     <div className="header">
-        <div className='logo'>´
-            <img src="../src/assets/logo_flecha_800px.png" alt="" className="imgLogo"/>
-        </div>
         <div className="headerContainer">
             <div className="headerList">
                 <div className="headerListItem active">
-                    <QuestionMarkRoundedIcon className="hListIcon"/>
-                    <span>Conocenos</span>
+                    <Link className="link" to ="/servicios">
+                        <QuestionMarkRoundedIcon className="hListIcon"/>
+                        <span>Conocenos</span>
+                    </Link>
                 </div>
                 <div className="headerListItem">
-                    <HailRoundedIcon className="hListIcon"/>
-                    <span>Solicitar Servicio</span>
+                    <Link className="link" to ="/servicios">
+                        <DirectionsCarIcon className="hListIcon"/>
+                        <span>Servicios</span>
+                    </Link>
                 </div>
                 <div className="headerListItem">
-                    <LocalPhoneRoundedIcon className="hListIcon"/>
-                    <span>Contacto</span>
+                    <Link className="link" to ="/servicios">
+                        <LocalPhoneRoundedIcon className="hListIcon"/>
+                        <span>Cotización</span>
+                    </Link>
                 </div>
             </div>
         </div>

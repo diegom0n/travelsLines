@@ -5,6 +5,9 @@ import ReservationForm from '../../components/reservationForm/ReservationForm'
 import Footer from "../../components/footer/Footer"
 import Slider from "../../components/slider/Slider"
 import SliderComponent from "../../components/slider/Slider"
+import AboutUs from "../../components/aboutUs/aboutUs"
+import Featured from "../../components/featured/Featured"
+import Particular from "../../components/particular/Particular"
 
 const Home = () => {
   return (
@@ -13,6 +16,13 @@ const Home = () => {
         <Navbar/>
         <Header/>
         <SliderComponent />
+        <AboutUs/>
+        <div className="homeContainer">
+          <Featured/>
+        </div>
+        <div className="homeContainer">
+          <Particular/>
+        </div>
         <Footer/>
       </div>
     </div>

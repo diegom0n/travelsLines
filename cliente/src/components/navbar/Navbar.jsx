@@ -6,11 +6,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className='navbar'>
-      <img src="../src/assets/logo_texto_800px.png" alt="" className="logoText"/>
+      <div className="logo">
+        <Link className="link" to ="/">
+          <span className="logoText">TRAVELSLINES</span>
+        </Link>
+      </div>
         <div className='navContainer'>
             <div className='navItems'>
               <span className="contacto">
-              +56 2 2222 2222
+              +56 9 5347 0232 | +56 9 7449 2861
               </span>
                 <div className="navButton">
                   <Link className="link" to ="/login">
