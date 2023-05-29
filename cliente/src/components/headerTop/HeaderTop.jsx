@@ -1,4 +1,4 @@
-import "./header.css"
+import "./HeaderTop.css"
 import QuestionMarkRoundedIcon from '@mui/icons-material/QuestionMarkRounded';
 import HailRoundedIcon from '@mui/icons-material/HailRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
@@ -7,7 +7,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
+const HeaderTop = () => {
   return (
     <div className="header">
         <div className="headerContainer">
@@ -36,4 +36,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default HeaderTop

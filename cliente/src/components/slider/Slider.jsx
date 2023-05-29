@@ -46,11 +46,11 @@ const SliderComponent = () => {
       <div className="reservation-box">
         {!selectedService ? (
           <>
-            <h2>Reserva tu traslado</h2>
+            <h2>Cotiza tu viaje</h2>
             <div className="service-selection">
               <h3>Selecciona el tipo de servicio:</h3>
               <div className="service-buttons">
-                <button onClick={() => handleServiceSelection('Empresas Privadas')}>EMPRESAS PRIVADAS</button>
+                <button onClick={() => handleServiceSelection('Empresas')}>EMPRESAS</button>
                 <button onClick={() => handleServiceSelection('Mascotas')}>MASCOTAS</button>
                 <button onClick={() => handleServiceSelection('Encomiendas')}>ENCOMIENDAS</button>
                 <button onClick={() => handleServiceSelection('Particulares')}>PARTICULARES</button>
@@ -59,7 +59,7 @@ const SliderComponent = () => {
           </>
         ) : (
           <>
-            <h2>Reserva tu traslado</h2>
+            <h2>Cotiza tu viaje</h2>
             <h3>Tipo de servicio seleccionado: {selectedService}</h3>
             <form>
               <input type="text" name="nombre" placeholder="Nombre" />

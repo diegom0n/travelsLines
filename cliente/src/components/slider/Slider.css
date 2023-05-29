@@ -28,7 +28,7 @@ img {
   height: 450px;
   width: 300px;
   border-radius: 10px;
-  border: 2px dashed #3e8e41;
+  border: 2px solid #3e8e41;
 }
 
 .reservation-box h2 {
