@@ -3,7 +3,7 @@
     flex-wrap: wrap;
   }
   
-.card {
+.aboutCard {
     flex: 1 0 300px;
     background-color: #f4f4f4;
     padding: 20px;
@@ -21,7 +21,7 @@
     text-align: center;
   }
   
-.card:hover {
+.aboutCard:hover {
     transform: translateY(-10px);
   }
 

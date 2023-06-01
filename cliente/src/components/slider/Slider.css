@@ -27,8 +27,14 @@ img {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   height: 450px;
   width: 300px;
-  border-radius: 10px;
+  border-radius: 7px;
   border: 2px solid #3e8e41;
+}
+
+.reservation-box.expanded {
+  top: 40%;
+  height: 650px; /* Ajusta la altura según tus necesidades */
+  transition: height 0.3s ease; /* Agrega una transición suave de altura */
 }
 
 .reservation-box h2 {
@@ -49,12 +55,24 @@ img {
   margin-bottom: 10px;
   padding: 5px;
   width: 200px;
+  border: 1px solid #3e8e41;
+  border-radius: 7px;
 }
 
-.reservation-box form input[type="submit"] {
+.reservation-box form input[type="button"] {
   background-color: #4CAF50;
   color: #ffffff;
   border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.reservation-box form button {
+  background-color: #686b76;
+  color: #ffffff;
+  border: none;
+  padding: 5px;
+  border-radius: 7px;
   cursor: pointer;
 }
 

@@ -7,11 +7,10 @@ import {
   Route,
 } from "react-router-dom";
 import './App.css'
-import Home from './pages/Home/Home';
+import Home from './pages/home/Home';
 import List from './pages/list/List';
 import Servicio from './pages/Servicio/Servicio';
-import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
+import Cotiza from './pages/cotiza/cotiza';
 
 
 function App() {
@@ -21,10 +20,9 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/servicios" element={<List/>}/>
-        <Route path="/servicios/:id" element={<Servicio/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/register" element={<Register/>}/>
+        <Route path="/servicio" element={<List/>}/>
+        <Route path="/servicios" element={<Servicio/>}/>
+        <Route path="/cotiza" element={<Cotiza/>}/>
       </Routes>
     </BrowserRouter>
   )
