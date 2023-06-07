@@ -19,9 +19,11 @@ const AboutUs = () => {
         <p>Ser reconocida como una de las mejores empresas de Transporte que Otorga Servicios de Calidad Comodidad y Confianza en todo el Territorio Nacional.</p>
       </div>
 
-      <div className='aboutCard'>
+      <div className='aboutCardCorreo'>
         <h2>Correo Corporativo</h2>
         <p>contacto@travelslines.cl</p>
+        <p>patricia@travelslines.cl</p>
+        <p>karina@travelslines.cl</p>
       </div>
     </div>
   );

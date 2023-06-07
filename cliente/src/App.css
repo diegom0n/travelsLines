@@ -1,6 +1,6 @@
 #root {
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
   
 }
@@ -13,8 +13,8 @@
 
 @font-face {
   font-family: 'slick';
-  src: url('../fonts/slick.woff') format('woff'),
-       url('../fonts/slick.ttf') format('truetype');
+  src: url('../public/fonts/slick.woff') format('woff'),
+       url('../public/fonts/slick.ttf') format('truetype');
   /* Resto de los estilos de la fuente */
 }
 

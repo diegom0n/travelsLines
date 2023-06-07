@@ -62,16 +62,27 @@ const SliderComponent = () => {
     <div className="slider-container">
       <Slider {...settings}>
         <div className="slide">
-          <img src="https://images.unsplash.com/photo-1656110074070-34939c497739?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Imagen 1" />
+          <div className="slide-content">
+            <img src="https://cdn.discordapp.com/attachments/981382192271859775/1115464413365948436/imgMascostas.jpeg" alt="Imagen 1" />
+          </div>
         </div>
         <div className="slide">
-          <img src="https://images.unsplash.com/photo-1485575397155-c9b47f81f645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 2" />
+          <div className="slide-content">
+            <img src="https://images.unsplash.com/photo-1485575397155-c9b47f81f645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 2" />
+
+          </div>
         </div>
         <div className="slide">
-          <img src="https://images.unsplash.com/photo-1605410522294-80aa1f8b4153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80" alt="Imagen 3" />
+          <div className="slide-content">
+            <img src="https://images.unsplash.com/photo-1605410522294-80aa1f8b4153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80" alt="Imagen 3" />
+
+          </div>
         </div>
         <div className="slide">
-          <img src="https://www.expresito.com/expresito/wp-content/uploads/2018/06/expresito_carga-min.jpg" alt="Imagen 4" />
+          <div className="slide-content">
+            <img src="https://www.expresito.com/expresito/wp-content/uploads/2018/06/expresito_carga-min.jpg" alt="Imagen 4" />
+
+          </div>
         </div>
       </Slider>
       <div className={`reservation-box ${selectedService ? 'expanded' : ''}`}>

@@ -1,30 +1,22 @@
 @import url('https://fonts.cdnfonts.com/css/tamworth-gothic');
 
-.link{
-    color: white;
+.link {
+  color: white;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 0; /* Cambio: coloca el navbar en la parte superior */
+    left: 0; /* Cambio: ajusta el margen izquierdo si es necesario */
+    right: 0; /* Cambio: ajusta el margen derecho si es necesario */
     height: 80px;
     background-color: #39be42;
-}
 
-.logoText{
-    width: 50px;
-    font-family: 'Tamworth Gothic', sans-serif;
-    color: white;
-    font-size: 44px;
-}
+  }
 
-.icon{
-    width: 150px;
-    height: 150px;
-}
-
-.navContainer{
+.navContainer {
     margin-right: 100px;
     width: 100%;
     max-width: 1024px;
@@ -33,44 +25,62 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-between;
+    box-sizing: border-box; /* Nueva línea */
+    overflow: hidden; /* Nueva línea */
+  }
+
+.navItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.navItems{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    
-}
-
-.contacto{
-    font-size: 24px;
-}
-
-.contacto1{
-    font-size: 24px;
-}
-
-.contacto2{
-    font-size: 24px;
-}
-
-.navButton{
+.logoText {
     width: 50px;
-    display: flex;
-    gap: 15px;
-    color: #fff;
-    cursor: pointer;
-}
-
-.navLink{
+    font-family: 'Tamworth Gothic', sans-serif;
     color: white;
+    font-size: 44px;
+  }
+  
+  .icon {
+    width: 150px;
+    height: 150px;
+  }
+
+.contacto {
+  font-size: 24px;
 }
 
-.navLoginButton{
-    border-radius: 10px;
-    border: 1px solid #002aff;
-    padding: 8px;
-    color: #002aff;
-    background-color: white;
+.contacto1 {
+  font-size: 24px;
+}
+
+.contacto2 {
+  font-size: 24px;
+}
+
+.navButton {
+  width: 50px;
+  display: flex;
+  gap: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.navLink {
+  color: white;
+}
+
+.navLoginButton {
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
+  color: #fff;
+  background-color: #002aff;
+}
+
+.navLoginButton:hover {
+  background-color: #1c5aea;
 }

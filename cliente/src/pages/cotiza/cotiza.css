@@ -1,0 +1,78 @@
+.cotiza-form {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 97vh;
+  }
+  
+  .cotiza-form h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+  }
+  
+  .cotiza-form h3 {
+    font-size: 30px;
+    margin-bottom: 45px;
+  }
+  
+  .cotiza-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .cotiza-form input[type="text"],
+  .cotiza-form input[type="email"],
+  .cotiza-form input[type="number"],
+  .cotiza-form input[type="date"],
+  .cotiza-form input[type="time"] {
+    width: 300px;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .cotiza-form input[type="button"] {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: #002aff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cotiza-form button {
+    width: 200px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .cotiza-form button:hover {
+    background-color: #002aff;
+  }
+  
+  .cotiza-form .go-back-button {
+    width: 150px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #636364;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cotiza-form .go-back-button:hover {
+    background-color: #afafaf;
+  }
+  
