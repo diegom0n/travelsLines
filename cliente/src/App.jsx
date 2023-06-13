@@ -11,6 +11,7 @@ import Home from './pages/home/Home';
 import List from './pages/list/List';
 import Servicio from './pages/Servicio/Servicio';
 import Cotiza from './pages/cotiza/cotiza';
+import Work from './pages/work/Work';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/servicio" element={<List/>}/>
         <Route path="/servicios" element={<Servicio/>}/>
         <Route path="/cotiza" element={<Cotiza/>}/>
+        <Route path="/trabaja_con_nosotros" element={<Work/>}/>
       </Routes>
     </BrowserRouter>
   )

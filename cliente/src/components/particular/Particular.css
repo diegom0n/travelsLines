@@ -1,51 +1,68 @@
 .particular {
-    display: flex;
-    height: 80vh;
-    gap: 10px;
-    margin: 10px;
-  }
-  
-  .particular .col {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px;
+}
+
+.particular .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.particular .col-l {
+  flex: 2;
+}
+
+.particular .row {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.particular .row button {
+  position: absolute;
+  min-width: 100px;
+  width: fit-content;
+  height: 50px;
+  padding: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.particular .row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Estilos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
   .particular .col-l {
-    flex: 2;
+    flex: 1;
   }
   
   .particular .row {
-    flex: 1;
-    display: flex;
-    gap: 10px;
-    position: relative;
-    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
   }
   
   .particular .row button {
-    position: absolute;
-    min-width: 100px;
-    width: fit-content;
-    height: 50px;
-    padding: 10px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    cursor: pointer;
-    border: none;
-    background-color: white;
-    text-transform: uppercase;
-    font-weight: 500;
+    position: static;
+    margin: 10px auto;
   }
-  
-  .particular .row img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-  }
-  
+}

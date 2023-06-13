@@ -41,7 +41,7 @@ const Header = () => {
           </div>
           <div className="headerListItem">
             <WorkIcon className="hListIcon" />
-            <Link className="headLink" to="/servicios">
+            <Link className="headLink" to="/trabaja_con_nosotros">
               <span>Trabaja con Nosotros</span>
             </Link>
           </div>

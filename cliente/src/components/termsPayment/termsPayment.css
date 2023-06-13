@@ -1,0 +1,50 @@
+.termsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .termsCard {
+    flex: 1 0 100%;
+    max-width: 600px;
+    background-color: #f4f4f4;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #39be42;
+    border-radius: 15px;
+    font-size: 22px;
+    box-shadow: 30px 25px 10px rgba(0, 0, 0, 0.272);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .termsCard:hover {
+    transform: translateY(-10px);
+  }
+  
+  h2 {
+    font-size: 32px;
+    color: #002aff;
+  }
+  
+  .termsCard ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    text-align: justify;
+    padding-left: 0;
+  }
+  
+  .termsCard li {
+    margin-bottom: 0.5em;
+    list-style-type: disc;
+  }
+  
+  @media (min-width: 768px) {
+    .termsCard {
+      max-width: 400px;
+    }
+  }
+  

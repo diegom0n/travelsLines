@@ -7,6 +7,7 @@ import Footer from "../../components/footer/Footer";
 import Slider from "../../components/slider/Slider";
 import SliderComponent from "../../components/slider/Slider";
 import AboutUs from "../../components/aboutUs/aboutUs";
+import TermsPayment from "../../components/termsPayment/termsPayment";
 import Featured from "../../components/featured/Featured";
 import Particular from "../../components/particular/Particular";
 
@@ -31,6 +32,7 @@ const Home = () => {
         <div className="homeContainer">
           <Particular/>
         </div>
+        <TermsPayment/>
         <Footer/>
       </div>
     </div>
