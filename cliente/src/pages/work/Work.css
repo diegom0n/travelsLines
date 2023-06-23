@@ -1,0 +1,83 @@
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.form-part {
+  flex: 1;
+}
+
+.form-part h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.form-part h3 {
+  font-size: 30px;
+  margin-bottom: 45px;
+}
+
+.form-part form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.form-part input[type="text"],
+.form-part input[type="email"],
+.form-part input[type="tel"],
+.form-part input[type="date"],
+.form-part textarea {
+  width: 300px;
+  padding: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-part input[type="radio"],
+.form-part input[type="checkbox"]{
+  width: 30px;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-buttons button {
+  width: 200px;
+  padding: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-buttons button:hover {
+  background-color: #002aff;
+}
+
+.form-buttons .go-back-button {
+  width: 150px;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #636364;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-buttons .go-back-button:hover {
+  background-color: #afafaf;
+}

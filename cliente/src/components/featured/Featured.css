@@ -1,26 +1,33 @@
-.featured{
+.featured {
     width: 100%;
     max-width: 1080px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-}
-
-.featuredItem{
+  }
+  
+  .featuredItem {
     position: relative;
     color: white;
     border-radius: 15px;
     overflow: hidden;
     height: 400px;
-}
-
-.featuredImg{
+  }
+  
+  .featuredImg {
     width: 100%;
     object-fit: cover;
-}
-
-.featuredTitle{
+  }
+  
+  .featuredTitle {
     bottom: 20px;
     left: 20px;
     color: #002aff;
-}
+  }
+  
+  /* Añadir reglas para la primera y segunda imagen */
+  .featuredItem:nth-child(1),
+  .featuredItem:nth-child(2) {
+    flex-grow: 1;
+  }
+  

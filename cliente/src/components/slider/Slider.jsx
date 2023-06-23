@@ -8,6 +8,32 @@ import 'slick-carousel/slick/slick-theme.css';
 
 import './Slider.css'; // Archivo CSS para estilos personalizados del slider
 
+import ReactImageSize from 'react-image-size';
+import video1 from '../../assets/vid/video1.mp4';
+import image1 from '../../assets/img/empresas.jpg';
+import image2 from '../../assets/img/encomiendas.jpg';
+import image3 from '../../assets/img/mascotas.jpg';
+import image4 from '../../assets/img/privado.jpg';
+// Importa todas las imágenes del slider
+
+const images = [image1, image2, image3, image4, video1];
+
+const getLargestImageSize = async () => {
+  let largestSize = { width: 0, height: 0 };
+
+  for (const image of images) {
+    const dimensions = await ReactImageSize(image);
+    if (dimensions.width > largestSize.width || dimensions.height > largestSize.height) {
+      largestSize = dimensions;
+    }
+  }
+
+  return largestSize;
+};
+
+const largestImageSize = getLargestImageSize();
+
+
 const SliderComponent = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [nombre, setNombre] = useState('');
@@ -63,25 +89,28 @@ const SliderComponent = () => {
       <Slider {...settings}>
         <div className="slide">
           <div className="slide-content">
-            <img src="https://cdn.discordapp.com/attachments/981382192271859775/1115464413365948436/imgMascostas.jpeg" alt="Imagen 1" />
+            <video src={video1} alt="Video 1" controls/>
+          </div>
+        </div>
+
+        <div className="slide">
+          <div className="slide-content">
+            <img src={image1} alt="Imagen 1" />
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
-            <img src="https://images.unsplash.com/photo-1485575397155-c9b47f81f645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Imagen 2" />
-
+            <img src={image2} alt="Imagen 2" />
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
-            <img src="https://images.unsplash.com/photo-1605410522294-80aa1f8b4153?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1232&q=80" alt="Imagen 3" />
-
+            <img src={image3} alt="Imagen 3" />
           </div>
         </div>
         <div className="slide">
           <div className="slide-content">
-            <img src="https://www.expresito.com/expresito/wp-content/uploads/2018/06/expresito_carga-min.jpg" alt="Imagen 4" />
-
+            <img src={image4} alt="Imagen 4" />
           </div>
         </div>
       </Slider>

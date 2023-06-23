@@ -15,10 +15,11 @@
     align-items: center;
     border: 2px solid #39be42;
     border-radius: 15px;
-    font-size: 22px;
+    font-size: 24px;
     box-shadow: 30px 25px 10px rgba(0, 0, 0, 0.272);
     transition: transform 0.3s ease;
     text-align: center;
+    color: green;
   }
   
   .termsCard:hover {

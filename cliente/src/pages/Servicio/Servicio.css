@@ -49,7 +49,7 @@
 }
 
 .serv-card {
-  width: calc(33.33% - 2rem);
+  width: calc(33.33% - 5rem);
   /* El 2rem es el espacio entre las tarjetas */
   background-color: #39be42;
   border-radius: 8px;
@@ -86,10 +86,11 @@
   text-align: center;
 }
 
-.featuredImg {
-  width: 50%;
+.serv-card-img {
+  width: 90%;
   height: auto;
   margin-bottom: 1rem;
+  border-radius: 15px;
 }
 
 .description {

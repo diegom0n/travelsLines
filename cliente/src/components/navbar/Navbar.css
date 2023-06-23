@@ -17,9 +17,8 @@
   }
 
 .navContainer {
-    margin-right: 100px;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1550px;
     color: white;
     display: flex;
     flex-direction: column;
@@ -44,21 +43,20 @@
     font-size: 44px;
   }
   
-  .icon {
-    width: 150px;
-    height: 150px;
+  .iconWsp {
+    font-size: 500px;
   }
 
 .contacto {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 .contacto1 {
-  font-size: 24px;
+  font-size: 44px;
 }
 
 .contacto2 {
-  font-size: 24px;
+  font-size: 44px;
 }
 
 .navButton {
@@ -76,7 +74,8 @@
 .navLoginButton {
   border-radius: 10px;
   border: none;
-  padding: 8px;
+  padding: 12px;
+  font-size: 18px;
   color: #fff;
   background-color: #002aff;
 }

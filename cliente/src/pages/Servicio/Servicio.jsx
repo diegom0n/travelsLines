@@ -4,6 +4,10 @@ import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import './Servicio.css';
 
+import imgMatri from '../../assets/img/matrimonioCard.jpg';
+import imgTour from '../../assets/img/tourCard.jpg';
+import imgCasino from '../../assets/img/casinoCard.jpg';
+
 const Servicio = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
@@ -14,49 +18,49 @@ const Servicio = () => {
       {
         title: 'MATRIMONIOS:',
         description: 'Transporte de invitados a matrimonios de sus domicilios al lugar de la ceremonia, transporte al lugar de la fiesta y retorno a sus domicilios. (Servicio Puerta a Puerta)',
-        imageUrl: 'https://images.unsplash.com/photo-1559050695-edde77c73609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
+        imageUrl: imgMatri,
       },
       {
         title: 'EVENTOS ESPECIALES:',
         description: 'Transporte de invitados a Bautizos, Cumpleaños, Fiesta Empresa, Partidos de Futbol, Presentaciones Artísticas y Culturales, Conciertos entre otros.',
-        imageUrl: 'https://images.unsplash.com/photo-1559050695-edde77c73609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
+        imageUrl: imgMatri,
       },
       {
         title: 'VIAJES INTERREGIONALES:',
         description: 'Transporte de invitados a matrimonios de sus domicilios al lugar de la ceremonia, transporte al lugar de la fiesta y retorno a sus domicilios. (Servicio Puerta a Puerta)',
-        imageUrl: 'https://images.unsplash.com/photo-1559050695-edde77c73609?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80',
+        imageUrl: imgMatri,
       },
     ],
     TOURS: [
       {
-        title: 'TOUR 1:',
-        description: 'Descripción del Tour 1.',
-        imageUrl: 'https://example.com/image1.jpg',
+        title: 'VIAJES A LA NIEVE',
+        description: 'Transporte Valle Nevado - Farellones - El Colorado. Transporte privado desde domicilios - hoteles - Aeropuerto a Valle Nevado - Farellones - El Colorado y la Parva.',
+        imageUrl: 'https://cdn.discordapp.com/attachments/981382192271859775/1118003777543356497/WhatsApp_Image_2023-06-12_at_10.24.06_PM.jpeg',
       },
       {
-        title: 'TOUR 2:',
-        description: 'Descripción del Tour 2.',
-        imageUrl: 'https://example.com/image2.jpg',
+        title: 'VIAJES A LA PLAYA',
+        description: 'Transporte a Regiones: Valparaíso y Viña del Mar. Transporte Santiago a Valparaiso, Reñaca, Concón, Quintay, Algarrobo, San Alfonso del Mar, El Quisco, Maitencillo.',
+        imageUrl: imgTour,
       },
       {
-        title: 'TOUR 3:',
-        description: 'Descripción del Tour 3.',
-        imageUrl: 'https://example.com/image3.jpg',
+        title: 'TRASLADOS A CASINOS',
+        description: 'ENJOY: SANTIAGO-VIÑA DEL MAR, SANTIAGO- SAN ANTONIO DESDE DOMICIOLIO AEROPUERTO HOTELES. MONTICCELLO: SAN FRANCISCO DE MOSTAZAL, DESDE AEROPUERTO DOMICILIO HOTEL.',
+        imageUrl: imgCasino,
       },
     ],
     PRIVADOS: [
       {
-        title: 'SERVICIO PRIVADO 1:',
+        title: 'EMPRESAS PRIVADAS/PÚBLICAS',
         description: 'Descripción del Servicio Privado 1.',
         imageUrl: 'https://example.com/image4.jpg',
       },
       {
-        title: 'SERVICIO PRIVADO 2:',
+        title: 'UNIVERSIDADES',
         description: 'Descripción del Servicio Privado 2.',
         imageUrl: 'https://example.com/image5.jpg',
       },
       {
-        title: 'SERVICIO PRIVADO 3:',
+        title: 'CLUBES DEPORTIVOS',
         description: 'Descripción del Servicio Privado 3.',
         imageUrl: 'https://example.com/image6.jpg',
       },
@@ -78,7 +82,7 @@ const Servicio = () => {
       <div className="serv-card" key={index}>
         <div className="serv-card-content">
           <h3>{service.title}</h3>
-          <img src={service.imageUrl} alt="" className="featuredImg" />
+          <img src={service.imageUrl} alt="" className="serv-card-img" />
           <p className="description">{service.description}</p>
         </div>
       </div>

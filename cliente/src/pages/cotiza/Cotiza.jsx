@@ -21,7 +21,23 @@ const Cotiza = () => {
   };
 
   const handleSendMessage = () => {
-    // Lógica para enviar el mensaje de cotización
+    const message = `Hola, estoy interesado en el servicio de ${selectedService}.
+    Nombre: ${nombre}
+    Email: ${email}
+    Dirección de origen: ${direccionOrigen}
+    Dirección de destino: ${direccionDestino}
+    Número de pasajeros: ${numeroPasajeros}
+    Fecha de ida: ${fechaIda}
+    Fecha de regreso: ${fechaRegreso}
+    Hora de ida: ${horaIda}
+    Hora de regreso: ${horaRegreso}`;
+
+    const phoneNumber = '56939049349'; // Reemplaza con el número de WhatsApp destino
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappLink, '_blank');
   };
 
   const handleGoBack = () => {
