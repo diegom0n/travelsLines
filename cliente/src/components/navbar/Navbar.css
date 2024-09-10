@@ -5,28 +5,27 @@
 }
 
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 0; /* Cambio: coloca el navbar en la parte superior */
-    left: 0; /* Cambio: ajusta el margen izquierdo si es necesario */
-    right: 0; /* Cambio: ajusta el margen derecho si es necesario */
-    height: 80px;
-    background-color: #39be42;
-
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0; /* Cambio: coloca el navbar en la parte superior */
+  left: 0; /* Cambio: ajusta el margen izquierdo si es necesario */
+  right: 0; /* Cambio: ajusta el margen derecho si es necesario */
+  height: 50px;
+  background-color: #39be42;
+}
 
 .navContainer {
-    width: 100%;
-    max-width: 1550px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    box-sizing: border-box; /* Nueva línea */
-    overflow: hidden; /* Nueva línea */
-  }
+  width: 100%;
+  max-width: 1366px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  box-sizing: border-box; /* Nueva línea */
+  overflow: hidden; /* Nueva línea */
+}
 
 .navItems {
   display: flex;
@@ -37,26 +36,27 @@
 }
 
 .logoText {
-    width: 50px;
-    font-family: 'Tamworth Gothic', sans-serif;
-    color: white;
-    font-size: 44px;
-  }
-  
-  .iconWsp {
-    font-size: 500px;
-  }
+  margin-left: 50px;
+  width: 30px;
+  font-family: 'Tamworth Gothic', sans-serif;
+  color: white;
+  font-size: 28px;
+}
 
+.iconWsp {
+  font-size: 40px; /* Ajusta el tamaño de fuente a un valor razonable */
+}
 .contacto {
-  font-size: 34px;
+  font-size: 28px;
 }
 
 .contacto1 {
-  font-size: 44px;
+  font-size: 28px;
 }
 
 .contacto2 {
-  font-size: 44px;
+  font-size: 28px;
+  margin-right: 50px;
 }
 
 .navButton {
@@ -82,4 +82,58 @@
 
 .navLoginButton:hover {
   background-color: #1c5aea;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; /* Cambio: coloca el navbar en la parte superior */
+    left: 0; /* Cambio: ajusta el margen izquierdo si es necesario */
+    right: 0; /* Cambio: ajusta el margen derecho si es necesario */
+    height: 35px;
+    background-color: #39be42;
+  }
+
+  .navContainer {
+    padding: 0; /* Ajusta el espaciado interno si es necesario */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .navItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    flex-wrap: wrap;
+  }
+
+  .logoText {
+    margin-left: 15px;
+    font-size: 12px; /* Ajusta el tamaño de fuente del logo */
+  }
+
+  .navButton {
+    gap: 10px;
+  }
+  
+  .contacto {
+    font-size: 12px;
+  }
+  
+  .contacto1 {
+    font-size: 12px;
+  }
+  
+  .contacto2 {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+
+  
 }

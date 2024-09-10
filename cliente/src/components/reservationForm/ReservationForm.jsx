@@ -10,7 +10,7 @@ const ReservationForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar la reserva al servidor o hacer otras operaciones
+
     console.log('Reserva enviada:', {
       pickupLocation,
       destination,

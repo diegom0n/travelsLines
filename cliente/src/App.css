@@ -1,9 +1,10 @@
 #root {
-  max-width: 100%;
+  max-width: 1920px;
   margin: 0;
   text-align: center;
-  
+  overflow-x: hidden;
 }
+
 
 @media (max-width: 1920px) {
   #root {
@@ -11,9 +12,15 @@
   }
 }
 
+@media (min-width: 1600px) {
+  #root {
+    max-width: 100%;
+  }
+
+}
+
 @font-face {
   font-family: 'slick';
   src: url('../fonts/slick.woff') format('woff'),
        url('../fonts/slick.ttf') format('truetype');
-  /* Resto de los estilos de la fuente */
 }

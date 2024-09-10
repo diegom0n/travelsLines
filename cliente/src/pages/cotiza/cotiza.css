@@ -7,12 +7,13 @@
   }
   
   .cotiza-form h2 {
-    font-size: 48px;
+    font-size: 36px;
     margin-bottom: 30px;
+    color: #002aff;
   }
   
   .cotiza-form h3 {
-    font-size: 30px;
+    font-size: 24px;
     margin-bottom: 45px;
   }
   
@@ -29,16 +30,16 @@
   .cotiza-form input[type="date"],
   .cotiza-form input[type="time"] {
     width: 300px;
-    padding: 20px;
-    font-size: 18px;
+    padding: 10px;
+    font-size: 14px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
   
   .cotiza-form input[type="button"] {
-    width: 200px;
-    font-size: 18px;
-    padding: 10px;
+    width: 150px;
+    font-size: 14px;
+    padding: 8px;
     background-color: #002aff;
     color: #fff;
     border: none;
@@ -47,14 +48,14 @@
   }
   
   .cotiza-form button {
-    width: 200px;
-    padding: 20px;
+    width: 150px;
+    padding: 16px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
   }
   
   .cotiza-form button:hover {
@@ -64,7 +65,7 @@
   .cotiza-form .go-back-button {
     width: 150px;
     padding: 8px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #636364;
     color: #fff;
     border: none;

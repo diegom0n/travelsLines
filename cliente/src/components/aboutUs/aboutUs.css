@@ -1,12 +1,13 @@
 .aboutContainer {
+  max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: row;
+  width: 265px;
 }
 
 .aboutCard {
   flex: 1 0 100%;
-  max-width: 300px;
+  max-width: 350px;
   background-color: #f4f4f4;
   padding: 10px;
   color: green;
@@ -16,7 +17,7 @@
   align-items: center;
   border: 2px solid #39be42;
   border-radius: 15px;
-  font-size: 26px;
+  font-size: 18px;
   box-shadow: 30px 25px 10px rgba(0, 0, 0, 0.272);
   transition: transform 0.3s ease;
   text-align: center;
@@ -37,7 +38,7 @@
   align-items: center;
   border: 2px solid #39be42;
   border-radius: 15px;
-  font-size: 26px;
+  font-size: 18px;
   box-shadow: 30px 25px 10px rgba(0, 0, 0, 0.272);
   transition: transform 0.3s ease;
   text-align: center;
@@ -48,8 +49,8 @@
   transform: translateY(-10px);
 }
 
-h2 {
-  font-size: 32px;
+.aboutTitle {
+  font-size: 24px;
   color: #002aff;
 }
 
@@ -58,7 +59,15 @@ h2 {
   margin-bottom: 1px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .aboutContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 400px;
+  }
+
   .aboutCard {
     max-width: 400px;
   }
@@ -70,4 +79,14 @@ h2 {
   margin-bottom: 1px;
   margin-left: 0;
   margin-right: 0;
+}
+
+@media (min-width: 1600px) {
+  .aboutContainer {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 450px;
+  }
+  
 }

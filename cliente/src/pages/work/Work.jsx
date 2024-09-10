@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import Navbar from '../../components/navbar/Navbar';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 import './Work.css';
 
 const Work = () => {
+  const form = useRef();
   const [formPart, setFormPart] = useState(1);
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
@@ -31,41 +33,29 @@ const Work = () => {
     setFormPart(1);
   };
 
-  const handleFormSubmit = () => {
-    if (
-      nombre &&
-      apellido &&
-      fechaNacimiento &&
-      correoElectronico &&
-      telefono &&
-      aceptarCondiciones &&
-      sistemaOperativo &&
-      disponibilidadHoraria &&
-      direccion &&
-      region &&
-      comuna &&
-      genero &&
-      tipoVehiculo &&
-      estudiandoActualmente
-    ) {
-      console.log('Información del formulario:');
-      console.log('Nombre:', nombre);
-      console.log('Apellido:', apellido);
-      console.log('Fecha de Nacimiento:', fechaNacimiento);
-      console.log('Correo Electrónico:', correoElectronico);
-      console.log('Teléfono:', telefono);
-      console.log('Aceptar Condiciones:', aceptarCondiciones);
-      console.log('Sistema Operativo:', sistemaOperativo);
-      console.log('Disponibilidad Horaria:', disponibilidadHoraria);
-      console.log('Dirección:', direccion);
-      console.log('Región:', region);
-      console.log('Comuna:', comuna);
-      console.log('Género:', genero);
-      console.log('Tipo de Vehículo:', tipoVehiculo);
-      console.log('Estudiando Actualmente:', estudiandoActualmente);
-    } else {
-      alert('Por favor, completa todos los campos antes de enviar la solicitud.');
-    }
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form.current);
+
+    const data = {};
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    // Configuración de EmailJS
+    emailjs.init("YOUR_USER_ID");
+
+    emailjs
+      .send("service_kl5yhaa", "template_2c8lrbx", data)
+      .then((result) => {
+        console.log(result.text);
+        alert("Solicitud enviada correctamente.");
+      })
+      .catch((error) => {
+        console.log(error.text);
+        alert("Hubo un error al enviar la solicitud.");
+      });
   };
 
   return (
@@ -73,194 +63,201 @@ const Work = () => {
       <Navbar />
       <Header />
       <div className="form-container">
-        {formPart === 1 && (
-          <div className="form-part">
-            <h2>Trabaja con Nosotros</h2>
-            <form>
-              <input
-                type="text"
-                name="nombre"
-                placeholder="Nombre"
-                value={nombre}
-                onChange={(e) => setNombre(e.target.value)}
-              />
-              <input
-                type="text"
-                name="apellido"
-                placeholder="Apellido"
-                value={apellido}
-                onChange={(e) => setApellido(e.target.value)}
-              />
-              <input
-                type="date"
-                name="fechaNacimiento"
-                placeholder="Fecha de Nacimiento"
-                value={fechaNacimiento}
-                onChange={(e) => setFechaNacimiento(e.target.value)}
-              />
-              <input
-                type="email"
-                name="correoElectronico"
-                placeholder="Correo Electrónico"
-                value={correoElectronico}
-                onChange={(e) => setCorreoElectronico(e.target.value)}
-              />
-              <input
-                type="tel"
-                name="telefono"
-                placeholder="Teléfono"
-                value={telefono}
-                onChange={(e) => setTelefono(e.target.value)}
-              />
-              <label>
+        <div className="form-part">
+          <h2>Trabaja con Nosotros</h2>
+          <form ref={form} onSubmit={handleFormSubmit}>
+            {formPart === 1 && (
+              <>
+                {/* Formulario Parte 1 */}
                 <input
-                  type="checkbox"
-                  name="aceptarCondiciones"
-                  checked={aceptarCondiciones}
-                  onChange={(e) => setAceptarCondiciones(e.target.checked)}
+                  type="text"
+                  name="nombre"
+                  placeholder="Nombre"
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
                 />
-                Aceptar condiciones
-              </label>
-              <div className="form-buttons">
-                <button type="button" onClick={handleNextPart} disabled={!aceptarCondiciones}>
-                  Siguiente
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
+                <input
+                  type="text"
+                  name="apellido"
+                  placeholder="Apellido"
+                  value={apellido}
+                  onChange={(e) => setApellido(e.target.value)}
+                />
+                <input
+                  type="date"
+                  name="fechaNacimiento"
+                  placeholder="Fecha de Nacimiento"
+                  value={fechaNacimiento}
+                  onChange={(e) => setFechaNacimiento(e.target.value)}
+                />
+                <input
+                  type="email"
+                  name="correoElectronico"
+                  placeholder="Correo Electrónico"
+                  value={correoElectronico}
+                  onChange={(e) => setCorreoElectronico(e.target.value)}
+                />
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="Teléfono"
+                  value={telefono}
+                  onChange={(e) => setTelefono(e.target.value)}
+                />
+                <label>
+                  <input
+                    type="checkbox"
+                    name="aceptarCondiciones"
+                    checked={aceptarCondiciones}
+                    onChange={(e) => setAceptarCondiciones(e.target.checked)}
+                  />
+                  Aceptar condiciones
+                </label>
+                <div className="form-buttons">
+                  <button type="button" onClick={handleNextPart} disabled={!aceptarCondiciones}>
+                    Siguiente
+                  </button>
+                </div>
+              </>
+            )}
 
-        {formPart === 2 && (
-          <div className="form-part">
-            <h2>Trabaja con Nosotros</h2>
-            <form>
-              <label>
-                Sistema Operativo:
-                <br />
+            {formPart === 2 && (
+              <>
+                {/* Formulario Parte 2 */}
                 <label>
-                  <input
-                    type="radio"
-                    name="sistemaOperativo"
-                    value="iOS"
-                    checked={sistemaOperativo === 'iOS'}
-                    onChange={(e) => setSistemaOperativo(e.target.value)}
-                  />
-                  iOS
+                  Sistema Operativo:
+                  <br />
+                  <label>
+                    <input
+                      type="radio"
+                      name="sistemaOperativo"
+                      value="iOS"
+                      checked={sistemaOperativo === 'iOS'}
+                      onChange={(e) => setSistemaOperativo(e.target.value)}
+                    />
+                    iOS
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="sistemaOperativo"
+                      value="Android"
+                      checked={sistemaOperativo === 'Android'}
+                      onChange={(e) => setSistemaOperativo(e.target.value)}
+                    />
+                    Android
+                  </label>
                 </label>
+
+                <textarea
+                  name="disponibilidadHoraria"
+                  placeholder="Disponibilidad Horaria"
+                  value={disponibilidadHoraria}
+                  onChange={(e) => setDisponibilidadHoraria(e.target.value)}
+                ></textarea>
+
+                <input
+                  type="text"
+                  name="direccion"
+                  placeholder="Dirección"
+                  value={direccion}
+                  onChange={(e) => setDireccion(e.target.value)}
+                />
+
+                <input
+                  type="text"
+                  name="region"
+                  placeholder="Región"
+                  value={region}
+                  onChange={(e) => setRegion(e.target.value)}
+                />
+
+                <input
+                  type="text"
+                  name="comuna"
+                  placeholder="Comuna"
+                  value={comuna}
+                  onChange={(e) => setComuna(e.target.value)}
+                />
+
+                <input
+                  type="text"
+                  name="genero"
+                  placeholder="Género"
+                  value={genero}
+                  onChange={(e) => setGenero(e.target.value)}
+                />
+
                 <label>
-                  <input
-                    type="radio"
-                    name="sistemaOperativo"
-                    value="Android"
-                    checked={sistemaOperativo === 'Android'}
-                    onChange={(e) => setSistemaOperativo(e.target.value)}
-                  />
-                  Android
+                  Tipo de Vehículo:
+                  <br />
+                  <label>
+                    <input
+                      type="radio"
+                      name="tipoVehiculo"
+                      value="City Car"
+                      checked={tipoVehiculo === 'City Car'}
+                      onChange={(e) => setTipoVehiculo(e.target.value)}
+                    />
+                    City Car
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="tipoVehiculo"
+                      value="Sedán"
+                      checked={tipoVehiculo === 'Sedán'}
+                      onChange={(e) => setTipoVehiculo(e.target.value)}
+                    />
+                    Sedán
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="tipoVehiculo"
+                      value="SUV"
+                      checked={tipoVehiculo === 'SUV'}
+                      onChange={(e) => setTipoVehiculo(e.target.value)}
+                    />
+                    SUV
+                  </label>
                 </label>
-              </label>
-              <textarea
-                name="disponibilidadHoraria"
-                placeholder="Disponibilidad Horaria"
-                value={disponibilidadHoraria}
-                onChange={(e) => setDisponibilidadHoraria(e.target.value)}
-              ></textarea>
-              <input
-                type="text"
-                name="direccion"
-                placeholder="Dirección"
-                value={direccion}
-                onChange={(e) => setDireccion(e.target.value)}
-              />
-              <input
-                type="text"
-                name="region"
-                placeholder="Región"
-                value={region}
-                onChange={(e) => setRegion(e.target.value)}
-              />
-              <input
-                type="text"
-                name="comuna"
-                placeholder="Comuna"
-                value={comuna}
-                onChange={(e) => setComuna(e.target.value)}
-              />
-              <input
-                type="text"
-                name="genero"
-                placeholder="Género"
-                value={genero}
-                onChange={(e) => setGenero(e.target.value)}
-              />
-              <label>
-                Tipo de Vehículo:
-                <br />
+
                 <label>
-                  <input
-                    type="radio"
-                    name="tipoVehiculo"
-                    value="City Car"
-                    checked={tipoVehiculo === 'City Car'}
-                    onChange={(e) => setTipoVehiculo(e.target.value)}
-                  />
-                  City Car
+                  ¿Estás estudiando actualmente?
+                  <br />
+                  <label>
+                    <input
+                      type="radio"
+                      name="estudiandoActualmente"
+                      value="Sí"
+                      checked={estudiandoActualmente === 'Sí'}
+                      onChange={(e) => setEstudiandoActualmente(e.target.value)}
+                    />
+                    Sí
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="estudiandoActualmente"
+                      value="No"
+                      checked={estudiandoActualmente === 'No'}
+                      onChange={(e) => setEstudiandoActualmente(e.target.value)}
+                    />
+                    No
+                  </label>
                 </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="tipoVehiculo"
-                    value="Sedán"
-                    checked={tipoVehiculo === 'Sedán'}
-                    onChange={(e) => setTipoVehiculo(e.target.value)}
-                  />
-                  Sedán
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="tipoVehiculo"
-                    value="SUV"
-                    checked={tipoVehiculo === 'SUV'}
-                    onChange={(e) => setTipoVehiculo(e.target.value)}
-                  />
-                  SUV
-                </label>
-              </label>
-              <label>
-                ¿Estás estudiando actualmente?
-                <br />
-                <label>
-                  <input
-                    type="radio"
-                    name="estudiandoActualmente"
-                    value="Sí"
-                    checked={estudiandoActualmente === 'Sí'}
-                    onChange={(e) => setEstudiandoActualmente(e.target.value)}
-                  />
-                  Sí
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    name="estudiandoActualmente"
-                    value="No"
-                    checked={estudiandoActualmente === 'No'}
-                    onChange={(e) => setEstudiandoActualmente(e.target.value)}
-                  />
-                  No
-                </label>
-              </label>
-              <div className="form-buttons">
-                <button className='go-back-button' type="button" onClick={handlePreviousPart}>
-                  Volver
-                </button>
-                <button type="button" onClick={handleFormSubmit}>
-                  Enviar Solicitud
-                </button>
-              </div>
-            </form>
-          </div>
-        )}
+
+                <div className="form-buttons">
+                  <button className='go-back-button' type="button" onClick={handlePreviousPart}>
+                    Volver
+                  </button>
+                  <input type="submit" value="Enviar Solicitud" />
+                </div>
+              </>
+            )}
+          </form>
+        </div>
       </div>
       <Footer />
     </div>

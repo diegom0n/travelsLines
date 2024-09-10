@@ -3,6 +3,9 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import igLogo from '../../assets/img/igLogo.png';
+import imgLogo from '../../assets/logo.png';
+
 
 const Footer = () => {
   return (
@@ -13,15 +16,15 @@ const Footer = () => {
             <FacebookIcon style={{ fontSize: 40 }}/>
           </a>
           <a className="fLink" href="https://www.instagram.com/travels_lines/" target="_blank" rel="noopener noreferrer">
-            <InstagramIcon style={{ fontSize: 40 }}/>
+            <img src={igLogo} alt="Logo" className="igLogo" />
           </a>
         </div>
         <div className="logo">
-          <img src="/src/assets/logo_800px.png" alt="Logo" className="logoImg" />
+          <img src={imgLogo} alt="Logo" className="logoImg" />
         </div>
       </div>
       <div className="footerCopyright">
-        <p>&copy; {new Date().getFullYear()} TransLines. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} TravelsLines. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

@@ -7,6 +7,12 @@ import './Servicio.css';
 import imgMatri from '../../assets/img/matrimonioCard.jpg';
 import imgTour from '../../assets/img/tourCard.jpg';
 import imgCasino from '../../assets/img/casinoCard.jpg';
+import imgUni from '../../assets/img/uni2.jpg';
+import imgClub from '../../assets/img/clubes.jpg';
+import imgEjec from '../../assets/img/ejecutivos.jpg';
+import imgNieve from '../../assets/img/nieve.jpg';
+import imgEventos from '../../assets/img/eventos.jpg';
+import imgInter from '../../assets/img/interregional.jpg';
 
 const Servicio = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
@@ -17,52 +23,52 @@ const Servicio = () => {
     PARTICULARES: [
       {
         title: 'MATRIMONIOS:',
-        description: 'Transporte de invitados a matrimonios de sus domicilios al lugar de la ceremonia, transporte al lugar de la fiesta y retorno a sus domicilios. (Servicio Puerta a Puerta)',
+        description: 'Transporte de invitados desde sus domicilios al lugar de la ceremonia, particular y centros de eventos.',
         imageUrl: imgMatri,
       },
       {
         title: 'EVENTOS ESPECIALES:',
-        description: 'Transporte de invitados a Bautizos, Cumpleaños, Fiesta Empresa, Partidos de Futbol, Presentaciones Artísticas y Culturales, Conciertos entre otros.',
-        imageUrl: imgMatri,
+        description: 'Transporte de invitados a eventos como Bautizos, Cumpleaños, Fiesta Empresa, Presentaciones Artísticas y Culturales, Conciertos entre otros.',
+        imageUrl: imgEventos,
       },
       {
         title: 'VIAJES INTERREGIONALES:',
-        description: 'Transporte de invitados a matrimonios de sus domicilios al lugar de la ceremonia, transporte al lugar de la fiesta y retorno a sus domicilios. (Servicio Puerta a Puerta)',
-        imageUrl: imgMatri,
+        description: 'Viajes turísticos personalizados zona Norte, Sur y Centro.',
+        imageUrl: imgInter,
       },
     ],
     TOURS: [
       {
         title: 'VIAJES A LA NIEVE',
-        description: 'Transporte Valle Nevado - Farellones - El Colorado. Transporte privado desde domicilios - hoteles - Aeropuerto a Valle Nevado - Farellones - El Colorado y la Parva.',
-        imageUrl: 'https://cdn.discordapp.com/attachments/981382192271859775/1118003777543356497/WhatsApp_Image_2023-06-12_at_10.24.06_PM.jpeg',
+        description: 'Transporte a Valle Nevado, El Colorado, Farellones y La Parva, desde domicilios, hoteles y Aeropuerto.',
+        imageUrl: imgNieve,
       },
       {
         title: 'VIAJES A LA PLAYA',
-        description: 'Transporte a Regiones: Valparaíso y Viña del Mar. Transporte Santiago a Valparaiso, Reñaca, Concón, Quintay, Algarrobo, San Alfonso del Mar, El Quisco, Maitencillo.',
+        description: 'Transporte a Regiones: Valparaíso, Viña del Mar y todo el litoral central.',
         imageUrl: imgTour,
       },
       {
         title: 'TRASLADOS A CASINOS',
-        description: 'ENJOY: SANTIAGO-VIÑA DEL MAR, SANTIAGO- SAN ANTONIO DESDE DOMICIOLIO AEROPUERTO HOTELES. MONTICCELLO: SAN FRANCISCO DE MOSTAZAL, DESDE AEROPUERTO DOMICILIO HOTEL.',
+        description: 'Enjoy desde Santiago a Viña Del Mar y San Antonio desde Domicilio, Aeropuerto y Hoteles. Monticcello San Francisco De Mostazal desde Aeropuerto,  Domicilio y Hotel.',
         imageUrl: imgCasino,
       },
     ],
     PRIVADOS: [
       {
-        title: 'EMPRESAS PRIVADAS/PÚBLICAS',
-        description: 'Descripción del Servicio Privado 1.',
-        imageUrl: 'https://example.com/image4.jpg',
+        title: 'EMPRESAS',
+        description: 'Transporte para Empresas públicas y privadas.',
+        imageUrl: imgEjec,
       },
       {
         title: 'UNIVERSIDADES',
-        description: 'Descripción del Servicio Privado 2.',
-        imageUrl: 'https://example.com/image5.jpg',
+        description: 'Transporte para salidas a terreno en todas sus Áreas todo el año.',
+        imageUrl: imgUni,
       },
       {
         title: 'CLUBES DEPORTIVOS',
-        description: 'Descripción del Servicio Privado 3.',
-        imageUrl: 'https://example.com/image6.jpg',
+        description: 'Transporte a Recintos Deportivos, Estadios, Teatros, Canchas, Gimnasios y más.',
+        imageUrl: imgClub,
       },
     ],
   };

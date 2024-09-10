@@ -30,7 +30,6 @@ const Home = () => {
           <Featured/>
         </div>
         <div className="homeContainer">
-          <Particular/>
         </div>
         <TermsPayment/>
         <Footer/>

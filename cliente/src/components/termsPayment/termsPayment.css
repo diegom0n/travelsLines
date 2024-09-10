@@ -6,16 +6,16 @@
   
   .termsCard {
     flex: 1 0 100%;
-    max-width: 600px;
+    max-width: 500px;
     background-color: #f4f4f4;
     padding: 30px;
-    margin: 30px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 2px solid #39be42;
     border-radius: 15px;
-    font-size: 24px;
+    font-size: 20px;
     box-shadow: 30px 25px 10px rgba(0, 0, 0, 0.272);
     transition: transform 0.3s ease;
     text-align: center;
@@ -26,7 +26,7 @@
     transform: translateY(-10px);
   }
   
-  h2 {
+  .termsCard h2 {
     font-size: 32px;
     color: #002aff;
   }
@@ -43,9 +43,19 @@
     list-style-type: disc;
   }
   
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .termsCard {
-      max-width: 400px;
+      width: 100%; /* Ajusta el ancho para ocupar todo el espacio disponible */
+      max-width: 330px; 
+      height: auto;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .termsCard {
+      width: 100%; /* Ajusta el ancho para ocupar todo el espacio disponible */
+      max-width: 300px; 
+      height: auto;
     }
   }
   

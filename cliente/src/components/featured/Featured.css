@@ -1,33 +1,73 @@
+/* Estilos base */
 .featured {
-    width: 100%;
-    max-width: 1080px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.featuredItem {
+  position: relative;
+  color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  height: 400px;
+  width: 400px;
+}
+
+.featuredImgContainer {
+  height: 100%;
+  overflow: hidden;
+}
+
+.featuredImg1 {
+  width: 100%;
+  object-fit: cover;
+}
+
+.featuredImg2 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.featuredImg3 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.featuredTitle {
+  bottom: 20px;
+  left: 20px;
+  color: #002aff;
+  font-size: 12px;
+}
+
+/* Estilos responsivos para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+  .featured {
+    flex-direction: column; /* Cambia la dirección de los elementos a una columna */
+    gap: 0px; /* Añade un espaciado entre las imágenes */
   }
-  
+
   .featuredItem {
-    position: relative;
-    color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    height: 400px;
-  }
-  
-  .featuredImg {
+    height: auto;
     width: 100%;
-    object-fit: cover;
   }
-  
+
+  .featuredImg1 {
+    width: 100%;
+    transform: translateY(0) translateX(0);
+  }
+
+  .featuredImg2 {
+    transform: translateY(0);
+  }
+
   .featuredTitle {
-    bottom: 20px;
-    left: 20px;
-    color: #002aff;
+    bottom: 10px;
+    left: 10px;
   }
-  
-  /* Añadir reglas para la primera y segunda imagen */
-  .featuredItem:nth-child(1),
-  .featuredItem:nth-child(2) {
-    flex-grow: 1;
-  }
-  
+}
+
